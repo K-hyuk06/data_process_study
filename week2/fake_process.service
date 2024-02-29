@@ -1,0 +1,12 @@
+[Unit]
+Description=fake process
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/
+ExecStart=/home/ubuntu/venv/bin/python3 /home/ubuntu/data_process_study/week2/fake_process.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
